@@ -2,7 +2,7 @@ import cv2
 import numpy
 
 
-#pöö
+
 def KuvienVertaus(kuva1,kuva2,erotus):
     '''
     saa parametriksi kuvat 2-ulotteisessa listassa
