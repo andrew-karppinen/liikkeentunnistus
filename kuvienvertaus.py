@@ -1,4 +1,3 @@
-import cv2
 import numpy
 
 
@@ -51,7 +50,7 @@ def KuvienVertaus(kuva1,kuva2,erotus):
 
 
 if __name__ == "__main__": #tesiohjelma
-
+    import cv2
     kuvannimi1 = "kuva1.png"
 
     kuvannimi2 = "kuva2.png"
