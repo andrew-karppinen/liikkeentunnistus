@@ -7,6 +7,7 @@ from kuvienvertaus import KuvienVertaus
 
 '''
 Esimerkkiohjelma raspberry pi cameran käytöstä liiketunnistimena
+käyttää cv2 kirjastoa
 
 ottaa kaksi kuvaa viiveellä
 tallentaa kuvat jos kuvissa riittävän suuri eroavaisuus
