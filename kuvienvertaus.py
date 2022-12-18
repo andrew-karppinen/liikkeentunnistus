@@ -5,12 +5,12 @@ import numpy
 def KuvienVertaus(kuva1,kuva2,erotus):
     '''
     saa parametriksi kuvat 2-ulotteisessa listassa (numpy array)
-    Funktio tarvitsee numpyn, mutta ei muita kirjastoja
     sekä kuinka suuri kirkkasu ero pitää olla (pienempi luku herkempi)
     
     palauttaa kirkkauseron ylittävien pikseleiden lukumäärän
-    
     Listojen mittojen tulisi olla samoja
+    
+    Funktio tarvitsee numpyn, mutta ei muita kirjastoja
     '''
     
 
