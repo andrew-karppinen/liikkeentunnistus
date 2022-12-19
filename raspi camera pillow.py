@@ -35,19 +35,22 @@ while True: #silmukka pyörii kunnes ohjelma suljetaan
 
     camera.capture(kuvannimi2) #toinen kuva
 
-    #lukee äskön otetut kuvat mustavalkoisena
+    #lukee äskön otetut kuvat mustavalkoisena vertaamista varten
     lista1 = numpy.array(Image.open(kuvannimi1).convert('L')) #lukee kuvan 2d taulukkoon mustavalkoisena
     lista2 = numpy.array(Image.open(kuvannimi2).convert('L')) #lukee kuvan 2d taulukkoon mustavalkoisena
-
-
-    erotus = KuvienVertaus(lista1,lista2,50) #Kuvien vertaus
     
-    print(erotus)
+    #luetaan kuvat värillisenä tallentamista varten
+    kuva1 =  Image.open(kuvannimi1)
+    kuva2 = Image.open(kuvannimi2)
 
-    if erotus > 50: #jos kuvissa riittävän suuri eroavaisuus
-        #tallentaa mustavalkoiset kuvat
-        cv2.imwrite(f"{polku}/tallennettukuva1_{laskuri}.png",lista1)
-        cv2.imwrite(f"{polku}/tallennettukuva2_{laskuri}.png",lista2)
+    erotus = KuvienVertaus(lista1,lista2,65) #Kuvien vertaus
+    
+
+
+    if erotus > 60: #jos kuvissa riittävän suuri eroavaisuus
+        #tallentaa värilliset kuvat
+        kuva1.save(f"{polku}/tallennettukuva1_{laskuri}.png")
+        kuva2.save(f"{polku}/tallennettukuva2_{laskuri}.png")
         laskuri += 1 #kasvatetaan kuvien numerointia
         print("kuva tallennettu")
     
