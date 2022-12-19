@@ -41,8 +41,8 @@ while True: #silmukka pyörii kunnes ohjelma suljetaan
     lista2 = cv2.imread(kuvannimi2,0)
     
     #lukee kuvat värillisenä, tallentamista varten
-    kuva1 = cv2.imread(kuvannimi1,0) 
-    kuva2 = cv2.imread(kuvannimi2,0)
+    kuva1 = cv2.imread(kuvannimi1) 
+    kuva2 = cv2.imread(kuvannimi2)
 
 
     erotus = KuvienVertaus(lista1,lista2,50) #Kuvien vertaus
