@@ -36,17 +36,21 @@ while True: #silmukka pyörii kunnes ohjelma suljetaan
 
     camera.capture(kuvannimi2) #toinen kuva
 
-    #lukee äskön otetut kuvat mustavalkoisena
+    #lukee äskön otetut kuvat mustavalkoisena, vertaamista varten
     lista1 = cv2.imread(kuvannimi1,0) 
     lista2 = cv2.imread(kuvannimi2,0)
+    
+    #lukee kuvat värillisenä, tallentamista varten
+    kuva1 = cv2.imread(kuvannimi1,0) 
+    kuva2 = cv2.imread(kuvannimi2,0)
 
 
     erotus = KuvienVertaus(lista1,lista2,50) #Kuvien vertaus
 
     if erotus > 50: #jos kuvissa riittävän suuri eroavaisuus
-        #tallentaa mustavalkoiset kuvat
-        cv2.imwrite(f"{polku}/tallennettukuva1_{laskuri}.png",lista1)
-        cv2.imwrite(f"{polku}/tallennettukuva2_{laskuri}.png",lista2)
+        #tallentaa kuvat
+        cv2.imwrite(f"{polku}/tallennettukuva1_{laskuri}.png",kuva1)
+        cv2.imwrite(f"{polku}/tallennettukuva2_{laskuri}.png",kuva2)
         laskuri += 1 #kasvatetaan kuvien numerointia
         print("kuva tallennettu")
     
