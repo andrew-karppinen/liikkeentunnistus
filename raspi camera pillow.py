@@ -36,8 +36,8 @@ while True: #silmukka pyörii kunnes ohjelma suljetaan
     camera.capture(kuvannimi2) #toinen kuva
 
     #lukee äskön otetut kuvat mustavalkoisena vertaamista varten
-    lista1 = numpy.array(Image.open(kuvannimi1).convert('L')) #lukee kuvan 2d taulukkoon mustavalkoisena
-    lista2 = numpy.array(Image.open(kuvannimi2).convert('L')) #lukee kuvan 2d taulukkoon mustavalkoisena
+    lista1 = numpy.array(Image.open(kuvannimi1).convert('L')) 
+    lista2 = numpy.array(Image.open(kuvannimi2).convert('L')) 
     
     #luetaan kuvat värillisenä tallentamista varten
     kuva1 =  Image.open(kuvannimi1)
